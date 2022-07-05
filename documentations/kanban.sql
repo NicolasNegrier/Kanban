@@ -28,8 +28,8 @@ CREATE TABLE project (
     prj_name VARCHAR(100) NOT NULL,
     prj_description VARCHAR(100) NOT NULL,
     prj_dpt_id INTEGER NOT NULL REFERENCES department(dpt_id) ON DELETE CASCADE,
-    usr_createdAt TIMESTAMP NOT NULL DEFAULT NOW(),
-    usr_updatedAt TIMESTAMP
+    prj_createdAt TIMESTAMP NOT NULL DEFAULT NOW(),
+    prj_updatedAt TIMESTAMP
 );
 
 CREATE TABLE list (
