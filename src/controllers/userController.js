@@ -16,7 +16,7 @@ const userController = {
             res.json(users);
 
         }catch(error) {
-            console.error(error)
+            console.error(error);
             res.status(500).json(error.message);
         }
 
@@ -93,7 +93,92 @@ const userController = {
               res.json(newUser);
 
         }catch(error) {
-            console.error(error)
+            console.error(error);
+            res.status(500).json(error.message);
+        }
+
+    },
+
+    getOneUser: async (req, res) => {
+
+        const userId = req.params.id;
+
+        try{
+            const user = await User.findByPk(userId, {
+                include: 'department'
+            });
+
+            if (!user) {
+                res.status(404).json("Je ne trouve pas cet utilisateur");
+            }else{
+                res.json(user);
+            }
+
+        }catch (error) {
+            console.error(error);
+            res.status(500).json(error.message);
+        }
+
+    },
+
+    modifyUser: async (req, res) => {
+
+        const userId = req.params.id;
+
+        try{
+            const user = await User.findByPk(userId, {
+                include: 'department'
+            });
+
+            if (!user) {
+                res.status(404).json("Je ne trouve pas cet utilisateur");
+            }
+
+            const { firstName, lastName, mail, role, dpt_id} = req.body
+
+            if (firstName) {
+                user.usr_firstName = firstName;
+            }
+            if (lastName) {
+                user.usr_lastName = lastName;
+            }
+            if (validate(mail)) {
+                user.usr_mail = mail;
+            }
+            if (role) {
+                user.usr_role = role;
+            }
+            if (dpt_id) {
+                user.usr_dpt_id = dpt_id;
+            }
+
+            await user.save();
+            res.json(user);
+
+        }catch (error) {
+            console.error(error);
+            res.status(500).json(error.message);
+        }
+    },
+
+    deleteUser: async (req, res) => {
+
+        const userId = req.params.id;
+
+        try{
+            const user = await User.findByPk(userId, {
+                include: 'department'
+            });
+
+            if (!user) {
+                res.status(404).json("Je ne trouve pas cet utilisateur");
+            }else{
+                await user.destroy();
+                res.json('Utilisateur supprimé');
+            }
+
+        }catch (error) {
+            console.error(error);
             res.status(500).json(error.message);
         }
 

@@ -106,5 +106,5 @@ Configuration minimum pour un fonctionnement à cette étape avec l'import de no
 ## Construction de nos controllers
 
 On debute avec notre userController.
-Route de récupération de nos utilisateurs OK
-route de création d'un utilisateur OK
+- Route de récupération de nos utilisateurs OK
+- route de création d'un utilisateur OK
