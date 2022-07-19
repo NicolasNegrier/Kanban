@@ -105,6 +105,18 @@ Configuration minimum pour un fonctionnement à cette étape avec l'import de no
 
 ## Construction de nos controllers
 
-On debute avec notre userController.
+### userController:
+
 - Route de récupération de nos utilisateurs OK
-- route de création d'un utilisateur OK
+- Route de création d'un utilisateur OK
+- Route de modification d'un utilisateur OK
+- Route de récupération d'un utilisateur OK
+- Route de suppression d'un utilisateur OK
+
+### departmentController:
+
+- Route de récupération des services OK
+- Route de création d'un service OK
+- Route de modification d'un service OK
+- Route de récupération d'un service OK
+- Route de suppression d'un service OK
