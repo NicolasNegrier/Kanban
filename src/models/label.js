@@ -15,6 +15,7 @@ Label.init({
         allowNull: false,
         defaultValue: '',
     },
+    lbl_dpt_id: DataTypes.INTEGER,
 }, {
     sequelize,
     createdAt: 'lbl_createdAt',

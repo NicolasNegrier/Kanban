@@ -29,6 +29,18 @@ Department.hasMany(Project, {
     foreignKey: 'prj_dpt_id',
 });
 
+/// ASSOCIATION DEPARTMENT ET LABEL
+
+Label.belongsTo(Department, {
+    as: 'department',
+    foreignKey: 'lbl_dpt_id',
+});
+
+Department.hasMany(Label, {
+    as: 'labels' ,
+    foreignKey: 'lbl_dpt_id'
+})
+
 // ASSOCIATION PROJECT ET LIST
 
 List.belongsTo(Project, {

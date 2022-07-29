@@ -54,6 +54,7 @@ CREATE TABLE card (
 CREATE TABLE label (
     lbl_id SERIAL PRIMARY KEY,
     lbl_name VARCHAR(50) NOT NULL DEFAULT '',
+    lbl_dpt_id INTEGER NOT NULL REFERENCES department(dpt_id) ON DELETE CASCADE,
     lbl_createdAt TIMESTAMP NOT NULL DEFAULT NOW(),
     lbl_updatedAt TIMESTAMP
 );
@@ -80,8 +81,8 @@ VALUES ('Projet 1', 'Le premier projet', 1);
 INSERT INTO list(lst_name, lst_prj_id)
 VALUES ('ToDo', 1);
 
-INSERT INTO label(lbl_name)
-VALUES ('URGENT');
+INSERT INTO label(lbl_name, lbl_dpt_id)
+VALUES ('URGENT', 1);
 
 INSERT INTO card(crd_description, crd_position, crd_color, crd_lst_id)
 VALUES ('Faire des erreurs volontaires', 0, '#123456', 1),
