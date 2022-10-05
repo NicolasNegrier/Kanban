@@ -13,6 +13,9 @@ const listController = {
             association: 'project',
           },
         ],
+        order: [
+          ['createdAt', 'DESC'],
+        ],
       });
       res.json(list);
     } catch (error) {

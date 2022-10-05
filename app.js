@@ -1,4 +1,5 @@
 require('dotenv').config();
+const cors = require('cors');
 const express = require('express');
 const bodyParser = require('body-parser');
 const router = require('./src/router');
@@ -6,6 +7,9 @@ const router = require('./src/router');
 const port = process.env.PORT || 5000;
 
 const app = express();
+
+// on ajoute le middleware pour cors dans son mode le plus ouvert, il accepte tout
+app.use(cors('*'));
 
 app.use(bodyParser.urlencoded({ extended: true }));
 

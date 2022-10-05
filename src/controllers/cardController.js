@@ -14,7 +14,7 @@ const cardController = {
         ],
         order: [
             ['crd_position', 'ASC'],
-        ]
+        ],
       });
       res.json(card);
     } catch (error) {
