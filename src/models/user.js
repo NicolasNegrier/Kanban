@@ -35,9 +35,9 @@ User.init({
     usr_dpt_id: DataTypes.INTEGER,
 }, {
     sequelize,
-    createdAt: 'usr_createdAt',
-    updatedAt: 'usr_updatedAt',
-    tableName: 'user',
+    createdAt: 'usr_createdat',
+    updatedAt: 'usr_updatedat',
+    tableName: 'k_user',
 }
 );
 

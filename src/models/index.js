@@ -3,7 +3,7 @@ const Card = require('./card');
 const User = require('./user');
 const Department = require('./department');
 const Project = require('./project');
-const Label= require('./label');
+const Label = require('./label');
 
 // ASSOCIATION USER ET DEPARTMENT
 
@@ -69,7 +69,7 @@ List.hasMany(Card, {
 
 Card.belongsToMany(Label, {
     as: 'labels',
-    through: 'card_own_label',
+    through: 'k_card_own_label',
     foreignKey: 'crdlbl_crd_id',
     otherKey: 'crdlbl_lbl_id',
     timestamps: false,
@@ -77,7 +77,7 @@ Card.belongsToMany(Label, {
 
 Label.belongsToMany(Card, {
     as: 'cards',
-    through: 'card_own_label',
+    through: 'k_card_own_label',
     foreignKey: 'crdlbl_lbl_id',
     otherKey: 'crdlbl_crd_id',
     timestamps: false,

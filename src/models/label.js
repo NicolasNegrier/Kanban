@@ -18,9 +18,9 @@ Label.init({
     lbl_dpt_id: DataTypes.INTEGER,
 }, {
     sequelize,
-    createdAt: 'lbl_createdAt',
-    updatedAt: 'lbl_updatedAt',
-    tableName: 'label',
+    createdAt: 'lbl_createdat',
+    updatedAt: 'lbl_updatedat',
+    tableName: 'k_label',
 }
 );
 

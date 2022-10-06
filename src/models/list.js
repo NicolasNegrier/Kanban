@@ -23,9 +23,9 @@ List.init({
     lst_prj_id: DataTypes.INTEGER,
 }, {
     sequelize,
-    createdAt: 'lst_createdAt',
-    updatedAt: 'lst_updatedAt',
-    tableName: 'list',
+    createdAt: 'lst_createdat',
+    updatedAt: 'lst_updatedat',
+    tableName: 'k_list',
 }
 );
 

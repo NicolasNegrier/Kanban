@@ -8,22 +8,22 @@ Project.init({
     prj_id: {
         type: DataTypes.INTEGER,
         autoIncrement: true,
-        primaryKey: true
+        primaryKey: true,
     },
     prj_name: {
         type: DataTypes.STRING(100),
-        allowNull: false
+        allowNull: false,
     },
     prj_description: {
         type: DataTypes.STRING(100),
-        allowNull: false
+        allowNull: false,
     },
     prj_dpt_id: DataTypes.INTEGER,
 }, {
     sequelize,
-    createdAt: 'prj_createdAt',
-    updatedAt: 'prj_updatedAt',
-    tableName: 'project',
+    createdAt: 'prj_createdat',
+    updatedAt: 'prj_updatedat',
+    tableName: 'k_project',
 }
 );
 

@@ -16,9 +16,9 @@ Department.init({
     },
 }, {
     sequelize,
-    createdAt: 'dpt_createdAt',
-    updatedAt: 'dpt_updatedAt',
-    tableName: 'department',
+    createdAt: 'dpt_createdat',
+    updatedAt: 'dpt_updatedat',
+    tableName: 'k_department',
 }
 );
 

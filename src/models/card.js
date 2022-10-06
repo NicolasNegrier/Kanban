@@ -22,9 +22,9 @@ Card.init({
     crd_lst_id: DataTypes.INTEGER,
 }, {
     sequelize,
-    createdAt: 'crd_createdAt',
-    updatedAt: 'crd_updatedAt',
-    tableName: 'card',
+    createdAt: 'crd_createdat',
+    updatedAt: 'crd_updatedat',
+    tableName: 'k_card',
 }
 );
 

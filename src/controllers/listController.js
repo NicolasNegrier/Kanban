@@ -14,7 +14,7 @@ const listController = {
           },
         ],
         order: [
-          ['createdAt', 'DESC'],
+          ['lst_createdat', 'DESC'],
         ],
       });
       res.json(list);
