@@ -28,30 +28,30 @@ router.delete('/departments/:id', departmentController.deleteDepartment);
 
 // routes PROJECT
 router.get('/projects', projectController.getAllProjects);
-router.get('/projects/:id', projectController.getOneProject),
-router.put('/projects', projectController.addProject),
-router.patch('/projects/:id', projectController.modifyProject),
-router.delete('/projects/:id', projectController.deleteProject),
+router.get('/projects/:id', projectController.getOneProject);
+router.put('/projects', projectController.addProject);
+router.patch('/projects/:id', projectController.modifyProject);
+router.delete('/projects/:id', projectController.deleteProject);
 
 // routes LIST
-router.get('/lists', listController.getAllLists),
-router.get('/lists/:id', listController.getOneList),
-router.put('/lists', listController.addList),
-router.patch('/lists/:id', listController.modifyList),
-router.delete('/lists/:id', listController.deleteList),
+router.get('/lists', listController.getAllLists);
+router.get('/lists/:id', listController.getOneList);
+router.put('/lists', listController.addList);
+router.patch('/lists/:id', listController.modifyList);
+router.delete('/lists/:id', listController.deleteList);
 
 // routes CARD
-router.get('/cards', cardController.getAllCards),
-router.get('/cards/:id', cardController.getOneCard),
-router.put('/cards', cardController.addCard),
-router.patch('/cards/:id', cardController.modifyCard),
-router.delete('/cards/:id', cardController.deleteCard),
+router.get('/cards', cardController.getAllCards);
+router.get('/cards/:id', cardController.getOneCard);
+router.put('/cards', cardController.addCard);
+router.patch('/cards/:id', cardController.modifyCard);
+router.delete('/cards/:id', cardController.deleteCard);
 
 // routes LABEL
-router.get('/labels', labelController.getAllLabels),
-router.get('/labels/:id', labelController.getOneLabel),
-router.put('/labels', labelController.addLabel),
-router.patch('/labels/:id', labelController.modifyLabel),
-router.delete('/labels/:id', labelController.deleteLabel),
+router.get('/labels', labelController.getAllLabels);
+router.get('/labels/:id', labelController.getOneLabel);
+router.put('/labels', labelController.addLabel);
+router.patch('/labels/:id', labelController.modifyLabel);
+router.delete('/labels/:id', labelController.deleteLabel);
 
 module.exports = router;
